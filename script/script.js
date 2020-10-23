@@ -33,7 +33,6 @@ const showPrevious = () =>{
 const showNext = () =>{
     sliding(counter + 1);
     counter++;
-    
 }
 startSlide();
 nextButton.addEventListener('click', ()=>{
@@ -53,3 +52,8 @@ prevButton.addEventListener('click', ()=>{
     showPrevious();
 });
 
+for (let i = 0; i <= carouselDots.length; i++){
+    carouselDots[i].addEventListener('click', ()=>{
+        sliding(i);
+        });
+    }
