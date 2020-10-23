@@ -34,7 +34,6 @@ button{
     color: white;
 }
 button{
-    
     background: #17daa2;
     outline: none;
     border: none;
@@ -87,7 +86,6 @@ section{
 }
 .hero .containerCarousel{
     position: absolute;
-    background: #59e8f834;
     height: 50%;
     width: 100%;
     top: 50%;
@@ -144,7 +142,7 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
-    animation: introHeroText .3s ease-in-out;
+    animation: introHeroText .6s ease-in-out;
 }
 
 .hero .text h1,
@@ -189,6 +187,7 @@ section{
  padding: 30px;
  margin-right: 3%;
  width: 270px;
+ height: 400px;
 }
 .containerOfCards .text h3{
     font-weight: 600;
@@ -216,7 +215,7 @@ section{
     display: flex;
     justify-content: space-evenly;
     text-align: left;
-    height: 50vh;
+    height: 100vh;
     padding: 10% 0% 5%;
 }
 
@@ -239,11 +238,9 @@ section:nth-of-type(4){
 
 @keyframes introHeroText{
     0%{
-     transform: translate(-50%, -50%) scale(0);
      opacity: 0;
     }
     100%{
-     transform:translate(-50%, -50%)  scale(1);
      opacity: 1;
     }
 }
