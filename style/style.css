@@ -62,7 +62,36 @@ section{
     text-align: center;
     position: relative;
 }
-
+.hero .containerCarousel{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hero .carouselButton{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3em;
+    color:#00b7cb8f;
+    transition: .1s ease-in-out;
+}
+.hero .carouselButton:hover{
+    font-size: 3.3em;
+    opacity: .8;
+}
+.hero .carouselButton:active{
+    font-size: 3em;
+    opacity: 1;
+}
+.hero .carouselButton:nth-of-type(1){
+    left: 20%;
+}
+.hero .carouselButton:nth-of-type(2){
+    left: 80%;
+}
 .hero{
     background: url("../img/heroimg.jpg") no-repeat 100% 100%;
 }
@@ -72,6 +101,15 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    transition: .3s ease-in-out;
+}
+.hero .text.left{
+    transform: translate(-500%, -50%);
+    opacity: 0;
+}
+.hero .text.right{
+    transform: translate(50%, -50%);
+    opacity: 0;
 }
 .hero .text h1,
 .about .heading h2{
@@ -125,7 +163,7 @@ section{
     justify-content: space-evenly;
     text-align: left;
     height: 50vh;
-    padding: 10% 2% 5%;
+    padding: 10% 0% 5%;
 }
 
 section:nth-of-type(3){
@@ -143,4 +181,15 @@ width: 30%;
 }
 section:nth-of-type(4){
     flex-direction: row-reverse;
+}
+
+@keyframes toTheRight{
+    0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(50%,-50%);
+        opacity: 0;
+    }
 }
