@@ -88,12 +88,14 @@ section{
     width: 80%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .containerOfCards .card{
  padding: 30px;
  margin-right: 3%;
  cursor: pointer;
+ width: 270px;
 }
 .containerOfCards .text h3{
     font-weight: 600;
@@ -111,4 +113,34 @@ section{
 .containerOfCards .card:hover i{
     color: white;
     background: #17daa2;
+}
+.work p,
+.about p{
+    font-weight: 400;
+    line-height: 35px;
+    color: #6c7175 ;
+}
+.work{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    height: 50vh;
+    padding: 10% 2% 5%;
+}
+
+section:nth-of-type(3){
+    background: #fafafa;
+}
+.work .text{
+width: 30%;
+}
+.work .text h2{
+    font-weight: 400;
+    font-size: 2.5em;
+}
+.work p{
+    margin-bottom: 40px;
+}
+section:nth-of-type(4){
+    flex-direction: row-reverse;
 }
