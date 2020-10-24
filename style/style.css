@@ -394,8 +394,9 @@ section:nth-of-type(4){
       }
       nav a{
           padding: 20px 50px;
-          background: #00b6cb;
-          margin-bottom: 2px;
+          background: #0193a3; 
+          box-shadow: 0px 0px 20px 0px #17daa37a;
+          margin-bottom: 0px;
           animation-name: dropMenu;
           -webkit-animation-name:dropMenu;
           animation-fill-mode:forwards;
@@ -480,6 +481,9 @@ section:nth-of-type(4){
       .about .heading .dash{
           top: 45%;
       }
+    .about{
+        height: 200vh;
+    } 
     .work{
         height: 100vh;
     }
@@ -519,6 +523,15 @@ section:nth-of-type(4) img{
     nav{
         margin-right: -54%;
     }
+    .hero{
+        background: url("../img/heroimg.jpg") no-repeat 55% 100%;
+    }
+    .hero .text h1{
+        font-size: 2.1em;
+    }
+    .hero .text p{
+        font-size: .8em;
+    }
     .about{
         height: 210vh;
     }
@@ -531,6 +544,114 @@ section:nth-of-type(4) img{
     section:nth-of-type(4) img{
         transform: translateX(-100px) scale(.6);
     }
+}
+@media only screen and (max-width: 420px){
+    nav{
+        margin-right: -43%;
+        margin-top: 18%;
+    }
+    .hero{
+        background: url("../img/heroimg.jpg") no-repeat 27% 70%;
+    }
+    .hero .text p{
+        font-size: .7em;
+    }
+    .carouselDots{
+        top: 75%;
+    }
+    .containerOfCards .card{
+        width: 350px;
+        height: 360px;
+        margin-bottom: 30px;
+    }
+    .about{
+        height: 330vh;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .work{
+        height: 170vh;
+    }  
+    section:nth-of-type(3) img{
+        transform: translateX(-145px) scale(.56);
+    }
+    section:nth-of-type(4) img{
+        transform: translateX(-140px) scale(.56);
+    }
+}
+@media only screen and (max-width: 384px){
+    nav{
+        margin-right: -39%;
+    }
+    .about{
+        height: 330vh;
+    }
+    .work{
+        height: 160vh;
+    } 
+    section:nth-of-type(3) img,
+    section:nth-of-type(4) img{
+        transform: translateX(-155px) scale(.56);
+    }
+    
+}
+@media only screen and (max-width: 360px){
+    nav{
+        margin-right: -35%;
+    }
+    .about{
+        height: 370vh;
+    }
+    .work{
+        height: 200vh;
+    }
+    
+}
+@media only screen and (max-width: 320px){
+    nav{
+        margin-left: -92%;
+        margin-top: 30%;
+    }
+    nav a{
+       padding-top: 25px; 
+       margin-bottom: 0px;
+       padding-bottom: 25px;
+       width: 100%;
+    }
+    nav a:nth-of-type(1){
+        border-radius: 35px 35px 0 0;
+    }
+    nav a:nth-of-type(5){
+        border-radius: 0 0 35px 35px;
+    }
+    .hero .carouselButton {
+        top: 43%;
+    }
+    .hero .carouselButton i{
+        font-size: .7em;
+    }
+    .hero .text p{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .carouselDots{
+        top: 80%;
+        left: 52%;
+    }
+    .about{
+        height: 455vh;
+    }
+    .work{
+        height: 205vh;
+    } 
+    .work .text h2{
+        font-size: 1.8em;
+    }
+    section:nth-of-type(3) img,
+    section:nth-of-type(4) img{
+        transform: translateX(-180px) scale(.36);
+    }
+    
 }
   @keyframes dropMenu {
     0%{

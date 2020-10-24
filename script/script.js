@@ -7,6 +7,7 @@ const nextButton = arrowButtons[1];
 const navigation = hero.querySelector('nav');
 const hamburger = hero.querySelector('.hamburger');
 const hamburgerSpans = hamburger.querySelectorAll('span');
+const navButtons = navigation.querySelectorAll('a');
 let counter = 0; 
 
 
@@ -56,6 +57,15 @@ hamburger.addEventListener('click', () =>{
     }
     navigation.classList.toggle('active');
   });   
+
+for(let navButton of navButtons){
+    navButton.addEventListener('click', () =>{
+        for(let span of hamburgerSpans){
+            span.classList.toggle('active');
+        }
+        navigation.classList.toggle('active');
+    });
+}
 
 for (let i = 0; i <= carouselDots.length; i++){
     carouselDots[i].addEventListener('click', ()=>{
