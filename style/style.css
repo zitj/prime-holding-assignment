@@ -169,13 +169,16 @@ section{
 .about .heading h2 {
     font-weight: 200;
 }
+.about .heading {
+    position: relative;
+}
 .about .heading .dash{
     width: 50px;
     height: 2px;
     background: #17daa2;
     position: absolute;
     left: 50%;
-    top: 18%;
+    top: 60%;
     z-index: 2;
     transform: translate(-50%, -50%);
 }
@@ -189,7 +192,6 @@ section{
 
 .containerOfCards .card{
  padding: 30px;
- margin-right: 3%;
  width: 270px;
  height: 400px;
 }
@@ -219,8 +221,8 @@ section{
     display: flex;
     justify-content: space-evenly;
     text-align: left;
-    height: 100vh;
-    padding: 10% 0% 5%;
+    height: 70vh;
+    padding-top: 10%;
 }
 
 section:nth-of-type(3){
@@ -248,3 +250,109 @@ section:nth-of-type(4){
      opacity: 1;
     }
 }
+
+@media only screen and (max-width: 1500px) {
+    .containerOfCards .card{
+        padding: 30px;
+        width: 200px;
+        height: 300px;
+       }
+    .about{
+        height: 120vh;
+    }   
+    .about .heading{
+        margin-top: 0%;
+    } 
+    .about .heading{
+        margin-bottom: 3%;
+    } 
+  }
+  @media only screen and (max-width: 1280px) {
+    .hero .text h1 {
+        font-size: 2.5em;
+    } 
+    .containerOfCards .card{
+        padding: 30px;
+        width: 180px;
+        height: 300px;
+       }
+    
+  }
+  @media only screen and (max-width: 1024px){
+    nav a{
+        padding: 20px;
+    }
+    .about{
+        height: 100vh;
+    }  
+    .containerOfCards .card{
+        padding: 30px;
+        width: 250px;
+        height: 300px;
+       }
+     .work{
+         padding: 5% 0% 0%;
+         height: 50vh;
+     }  
+     .work img{
+         transform: scale(.6);
+     }
+    
+     .work .text{
+         width: 60%;
+         margin-right: 12%;
+     }
+     section:nth-child(4) .text{
+         margin-left: 12%;
+         margin-right: 0%;
+     }
+  }
+  @media only screen and (max-width: 800px){
+    header{
+        width: 90%;
+        margin-left: 5%;
+    }
+    nav a{
+        padding: 20px 15px;
+    }
+    .hero .containerCarousel{
+        height: 70%;
+    }
+    .hero .carouselButton:nth-of-type(1){
+        left:10%
+    }
+    .hero .carouselButton:nth-of-type(2){
+        left:90%
+    }
+    .hero .text{
+        width: 75%;
+    }
+    .hero .text h1{
+        font-size: 2.3em;
+    }
+    .about{
+        height: 180vh;
+    }
+    .containerOfCards .card{
+        width: 300px;
+    }
+    .work{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        padding-top: 10%;
+    }  
+    .work .text{
+        width: 70%;
+        margin: 0%;
+        margin-top: -30%;
+    }
+    
+    section:nth-child(4) .text{
+        margin-left: 0%;
+    }
+    .work img{
+        transform: scale(.8);
+    }
+  }
