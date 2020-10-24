@@ -8,16 +8,28 @@ body{
 }
 .hamburger{
     display: none;
+    
 }
+
+   
+
 button,
 nav a,
 .carouselDots .dot,
 .containerOfCards .card,
 .containerOfCards i,
 .hero .carouselButton,
+.hamburger,
 .logo{
 transition: .2s ease-in-out;
 cursor: pointer;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-webkit-tap-highlight-color: transparent;
+user-select: none;
 }
 button:hover,
 nav a:hover,
@@ -30,6 +42,7 @@ nav a:active,
 .carouselDots .dot:active{
     opacity: 1;
     transform: scale(1);
+    
 }
 a,
 button{
@@ -42,6 +55,7 @@ button{
     border: none;
     padding: 13px 35px;
     border-radius: 30px;
+
 }
 .hero button{
     background: #00b6cb;
