@@ -1,11 +1,12 @@
-console.log('We are connected!');
-
 const hero = document.querySelector('.hero');
 const carouselContent = hero.querySelectorAll('.text');
 const arrowButtons = hero.querySelectorAll('.carouselButton');
 const carouselDots = hero.querySelectorAll('.dot');
 const prevButton = arrowButtons[0];
 const nextButton = arrowButtons[1];
+const navigation = hero.querySelector('nav');
+const hamburger = hero.querySelector('.hamburger');
+const hamburgerSpans = hamburger.querySelectorAll('span');
 let counter = 0; 
 
 
@@ -36,7 +37,6 @@ const showNext = () =>{
 }
 startSlide();
 nextButton.addEventListener('click', ()=>{
-    console.log(`${counter} You\'ve clicked on a right arrow button!`);
     if(counter >= carouselContent.length - 1){
         counter = -1;
         startSlide();
@@ -45,15 +45,21 @@ nextButton.addEventListener('click', ()=>{
     showNext();
 });
 prevButton.addEventListener('click', ()=>{
-    console.log(`${counter} You\'ve clicked on a left arrow button!`);
     if(counter === 0){
         counter = carouselContent.length;
     }
     showPrevious();
 });
+hamburger.addEventListener('click', () =>{
+    for(let span of hamburgerSpans){
+        span.classList.toggle('active');
+    }
+    navigation.classList.toggle('active');
+  });   
 
 for (let i = 0; i <= carouselDots.length; i++){
     carouselDots[i].addEventListener('click', ()=>{
         sliding(i);
         });
     }
+
