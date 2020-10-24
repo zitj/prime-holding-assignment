@@ -237,6 +237,7 @@ section:nth-of-type(3){
 }
 .work .text{
 width: 30%;
+z-index: 30;
 }
 .work img{
     position: absolute;
@@ -479,6 +480,21 @@ section:nth-of-type(4){
       .about .heading .dash{
           top: 45%;
       }
+    .work{
+        height: 100vh;
+    }
+
+    section:nth-of-type(4) .img{
+        margin-bottom: 10%;
+    }
+
+    section:nth-of-type(3) img{
+        transform: translateX(-80px) scale(.7);
+    }
+  
+    section:nth-of-type(4) img{
+        transform: translateX(-60px) scale(.7);
+    }
       
   }
   @media only screen and (max-width: 550px){
@@ -487,8 +503,35 @@ section:nth-of-type(4){
         margin-right:-61% ;
         z-index: 22;
     }
-   
+   .about{
+       height:250vh;
+       width: 80%;
+       margin-left: 10%;
+   }
+   .work{
+    height: 150vh;
+}  
+section:nth-of-type(4) img{
+    transform: translateX(-90px) scale(.7);
+}
   }
+@media only screen and (max-width: 480px){
+    nav{
+        margin-right: -54%;
+    }
+    .about{
+        height: 210vh;
+    }
+    .work{
+        height: 120vh;
+    }  
+    section:nth-of-type(3) img{
+        transform: translateX(-125px) scale(.6);
+    }
+    section:nth-of-type(4) img{
+        transform: translateX(-100px) scale(.6);
+    }
+}
   @keyframes dropMenu {
     0%{
       opacity: 0;
